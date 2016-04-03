@@ -33,7 +33,7 @@ void loop() {
   if ( digitalRead(BTNA_PIN) ) btnState += 1;
   if ( digitalRead(BTNB_PIN) ) btnState += 2;
   if ( digitalRead(BTNC_PIN) ) btnState += 4;
-  //if ( digitalRead(BTND_PIN) ) btnState += 8;
+  if ( digitalRead(BTND_PIN) ) btnState += 8;
   
   switch ( btnState ) {
     case 1:
