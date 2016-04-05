@@ -1,20 +1,22 @@
-/* 
- RF Remote Keyboard
- 
- For the Arduino Leonardo and Micro.
- 
- Sends keyboard stroke button is pressed.
- In my case, button is a RF receiver.
+/*
+  RF Remote Keyboard
 
- Inspired by :
- http://www.arduino.cc/en/Tutorial/KeyboardMessage
- */
+  For the Arduino Leonardo and Micro.
 
-#define BTNA_PIN 2          // input pin for pushbutton
-#define BTNB_PIN 3
-#define BTNC_PIN 4
-#define BTND_PIN 5
-#define DEBOUNCE_TIME 1000 // time to wait before repeating / rescanning
+  Sends keyboard stroke when button is pressed.
+  In my case, button is a RF receiver.
+
+  Inspired by :
+  http://www.arduino.cc/en/Tutorial/KeyboardMessage
+*/
+#include <Keyboard.h>
+
+#define BTNA_PIN 3          // input pin for pushbutton
+#define BTNB_PIN 4
+#define BTNC_PIN 5
+#define BTND_PIN 6
+#define VT_PIN 2
+#define DEBOUNCE_TIME 500 // time to wait before repeating / rescanning
 
 void setup() {
   // make the pushButton pin an input:
