@@ -24,6 +24,8 @@ void setup() {
   pinMode(BTNB_PIN, INPUT);
   pinMode(BTNC_PIN, INPUT);
   pinMode(BTND_PIN, INPUT);
+  pinMode(VT_PIN, OUTPUT);
+  digitalWrite(VT_PIN, LOW);
   // initialize control over the keyboard:
   Keyboard.begin();
 }
