@@ -33,32 +33,36 @@ void setup() {
 void loop() {
   // read all buttons:
   int btnState = 0;
-  
+
   if ( digitalRead(BTNA_PIN) ) btnState += 1;
   if ( digitalRead(BTNB_PIN) ) btnState += 2;
   if ( digitalRead(BTNC_PIN) ) btnState += 4;
   if ( digitalRead(BTND_PIN) ) btnState += 8;
-  
+
   switch ( btnState ) {
     case 1:
-      Keyboard.print('A');
+      Keyboard.press(' ');
+      Keyboard.releaseAll();
       delay(DEBOUNCE_TIME);
       break;
     case 2:
-      Keyboard.print('B');
+      Keyboard.press('B');
+      Keyboard.releaseAll();
       delay(DEBOUNCE_TIME);
       break;
     case 4:
-      Keyboard.print('C');
+      Keyboard.press('C');
+      Keyboard.releaseAll();
       delay(DEBOUNCE_TIME);
       break;
     case 8:
-      Keyboard.print('D');
+      Keyboard.press('D');
+      Keyboard.releaseAll();
       delay(DEBOUNCE_TIME);
       break;
-     default:
-       // more than one key is pressed, don't do anything
-       break;
+    default:
+      // more than one key is pressed, don't do anything
+      break;
   }
 }
 
