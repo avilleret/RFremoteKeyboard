@@ -46,12 +46,12 @@ void loop() {
       delay(DEBOUNCE_TIME);
       break;
     case 2:
-      Keyboard.press('B');
+      Keyboard.press('#');
       Keyboard.releaseAll();
       delay(DEBOUNCE_TIME);
       break;
     case 4:
-      Keyboard.press('C');
+      Keyboard.press('[');
       Keyboard.releaseAll();
       delay(DEBOUNCE_TIME);
       break;
